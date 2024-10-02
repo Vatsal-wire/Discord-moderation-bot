@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+import webserver
 
 TOKEN = os.environ['TOKEN']
 intents = discord.Intents.all() #need to enable
@@ -14,3 +15,4 @@ for foldername in os.listdir('./Cogs'): #for every folder in cogs
 
 
 bot.run(TOKEN)
+webserver.keep_alive()
